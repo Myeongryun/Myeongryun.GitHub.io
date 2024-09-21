@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 웹 페이지</title>
+    <style>
+        /* 페이지 왼쪽 상단에 스타일이 지정된 이름 */
+        #name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px;
+        }
+
+        /* 탐색 모음 */
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        nav ul li:hover {
+            font-size: 20px;
+            color: blue;
+        }
+
+        /* 내 정보 섹션 */
+        #my-info {
+            text-align: center;
+        }
+
+        #my-info img {
+            border-radius: 50%;
+        }
+
+        /* 스킬 섹션 */
+        #skills {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .skill {
+            text-align: center;
+        }
+
+        .skill img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 프로젝트 섹션 */
+        #projects .project {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* 권장 사항 섹션 */
+        #recommendations .recommendation {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 이름 -->
+    <div id="name">Your Name</div>
+
+    <!-- 탐색 모음 -->
+    <nav>
+        <ul>
+            <li>정보</li>
+            <li>프로젝트 세부 사항</li>
+            <li>기술</li>
+            <li>권장 사항</li>
+        </ul>
+    </nav>
+
+    <!-- 내 정보 섹션 -->
+    <section id="my-info">
+        <img src="profile.jpg" alt="프로필 이미지" width="100">
+        <h1>Your Name</h1>
+        <p>프로필 요약 텍스트</p>
+    </section>
+
+    <!-- 스킬 섹션 -->
+    <section id="skills">
+        <div class="skill">
+            <img src="html-logo.png" alt="HTML 로고" width="50">
+            <p>HTML</p>
+        </div>
+        <div class="skill">
+            <img src="css-logo.png" alt="CSS 로고" width="50">
+            <p>CSS</p>
+        </div>
+    </section>
+
+    <!-- 프로젝트 섹션 -->
+    <section id="projects">
+        <div class="project">
+            <h3>프로젝트 1</h3>
+            <p>프로젝트 설명</p>
+        </div>
+        <div class="project">
+            <h3>프로젝트 2</h3>
+            <p>프로젝트 설명</p>
+        </div>
+        <div class="project">
+            <h3>프로젝트 3</h3>
+            <p>프로젝트 설명</p>
+        </div>
+    </section>
+
+    <!-- 권장 사항 섹션 -->
+    <section id="recommendations">
+        <div class="recommendation">
+            <p>"추천사 1"</p>
+            <cite>- 작성자 1</cite>
+        </div>
+        <div class="recommendation">
+            <p>"추천사 2"</p>
+            <cite>- 작성자 2</cite>
+        </div>
+        <div class="recommendation">
+            <p>"추천사 3"</p>
+            <cite>- 작성자 3</cite>
+        </div>
+    </section>
+
+    <!-- 새 권장 사항 추가 버튼 -->
+    <button id="add-recommendation">추천 추가</button>
+    <section id="recommendations"></section>
+
+    <!-- 홈 아이콘 -->
+    <a href="index.html">
+        <img src="home-icon.png" alt="홈 아이콘" width="50">
+    </a>
+
+    <!-- 추천 제출 버튼 -->
+    <button id="submit-recommendation">추천 제출</button>
+
+    <script>
+        const addRecommendation = () => {
+            const recommendation = document.createElement('div');
+            recommendation.innerHTML = `<p>"새로운 추천사"</p><cite>- 작성자</cite>`;
+            document.getElementById('recommendations').appendChild(recommendation);
+        };
+
+        document.getElementById('add-recommendation').addEventListener('click', addRecommendation);
+
+        document.getElementById('submit-recommendation').addEventListener('click', () => {
+            alert('추천이 제출되었습니다.');
+        });
+    </script>
+
+</body>
+</html>
