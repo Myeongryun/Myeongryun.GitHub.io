@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 웹 페이지</title>
+    <style>
+        /* 페이지 왼쪽 상단에 스타일이 지정된 이름 */
+        #name-info {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+        }
+
+        /* 연락처 정보 스타일 */
+        .contact-info {
+            font-size: 16px;
+            color: white;
+        }
+
+        /* 탐색 모음 */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding-left: 0;
+        }
+
+        nav ul li {
+            font-size: 18px;
+            color: white;
+        }
+
+        nav ul li:hover {
+            font-weight: bold;
+            color: lightblue;
+        }
+
+        /* 상단바 스타일 */
+        #header {
+            background-color: purple;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #left-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 아이콘 스타일 */
+        .icon {
+            margin-right: 10px;
+        }
+
+        /* 중앙 정렬 */
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 내 정보 섹션 스타일 */
+        #about-me {
+            display: flex;
+            align-items: center;
+            margin: 50px 20px;
+        }
+
+        #about-me img {
+            width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        #about-me-text {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        #about-me-text h1 {
+            font-size: 32px;
+            color: purple;
+        }
+
+        /* 스킬 섹션 스타일 */
+        #skills {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 20px;
+        }
+
+        .skill {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 150px;
+        }
+
+        .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 상단바 -->
+    <div id="header">
+        <div id="left-section">
+            <div id="name-info">
+                Myeongryun Lee
+            </div>
+            <div class="contact-info">
+                <div><img class="icon" src="email-icon.png" alt="이메일 아이콘" width="20"> u1478136@umail.Utah.edu</div>
+                <div><img class="icon" src="phone-icon.png" alt="전화 아이콘" width="20"> 010-6208-8217</div>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>About Me</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Recommendations</li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 내 정보 섹션 -->
+    <section id="about-me">
+        <img src="profile.jpg" alt="Profile Image">
+        <div id="about-me-text">
+            <h1>Hi, I'm Myeongryun Lee!</h1>
+            <p>
+                I am currently a junior majoring in Psychology at the University of Utah.
+                I have a keen interest in human factors and I am studying to gain more knowledge in the field.
+                In addition, I am also pursuing certification in AI development through courses like IBM AI and Machine Learning on Coursera.
+            </p>
+        </div>
+    </section>
+
+    <!-- 스킬 섹션 -->
+    <section id="skills">
+        <div class="skill">
+            <img src="html-logo.png" alt="HTML Logo">
+            <p>HTML</p>
+            <p>4 years experience</p>
+        </div>
+        <div class="skill">
+            <img src="css-logo.png" alt="CSS Logo">
+            <p>CSS</p>
+            <p>4 years experience</p>
+        </div>
+        <div class="skill">
+            <img src="js-logo.png" alt="JavaScript Logo">
+            <p>JavaScript</p>
+            <p>3 years experience</p>
+        </div>
+        <div class="skill">
+            <img src="node-logo.png" alt="Node.js Logo">
+            <p>Node.js</p>
+            <p>4 years experience</p>
+        </div>
+        <div class="skill">
+            <img src="react-logo.png" alt="React Logo">
+            <p>React</p>
+            <p>4 years experience</p>
+        </div>
+    </section>
+
+</body>
+</html>
